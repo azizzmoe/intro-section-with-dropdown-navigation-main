@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+$Almost_White: #fafafa;
+$Medium_Gray: #696969;
+$Almost_Black: #141414;
+
+$Font_size: 18px;
+$Family_Font: "Epilogue", sans-serif;
+
+body {
+  font-family: $Family_Font;
+  color: $Medium_Gray;
+}
+
+.offcanvas {
+  max-width: 300px;
+}
+
+.hero {
+  img {
+    width: 100%;
+  }
+}
+
+.about {
+  margin: 3rem 2rem;
+  text-align: center;
+
+  .header {
+    font-weight: bold;
+    color: $Almost_Black;
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 1rem;
+    background-color: $Almost_Black;
+    color: $Almost_White;
+  }
+}
+
+.clients {
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  button.btn {
+    border: none;
+    padding: 0;
+  }
+
+  .btn.dropdown-toggle::after {
+    color: $Medium_Gray;
+  }
+
+  .dropdown-menu {
+    border: none;
+    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.Signup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .login {
+    background-color: #fff;
+  }
+  .btn.register {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: $Almost_Black solid 2px;
+  }
+}
+
+.Careers,
+.About {
+  cursor: pointer;
+}
