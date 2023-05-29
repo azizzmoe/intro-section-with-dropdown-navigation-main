@@ -1,130 +1,135 @@
 function Nav() {
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="./images/logo.svg" alt="" />
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            <img src="./images/logo.svg" className="logo" alt="logo" />
           </a>
 
           <button
-            class="btn"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasExample"
-            aria-controls="offcanvasExample"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
           >
             <img src="./images/icon-menu.svg" alt="menu-icon" />
           </button>
-
           <div
-            class="offcanvas offcanvas-end"
+            className="offcanvas offcanvas-end"
             tabindex="-1"
-            id="offcanvasExample"
-            aria-labelledby="offcanvasExampleLabel"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
           >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+            <div className="offcanvas-header">
+              <h5 className="offcanvas-title" id="offcanvasNavbarLabel"></h5>
               <img
                 src="./images/icon-close-menu.svg"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               />
             </div>
-            <div class="offcanvas-body">
-              <div class="dropdown">
-                <div className="feature">
-                  <button
-                    class="btn dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample"
-                    aria-expanded="false"
-                    aria-controls="collapseExample"
-                  >
-                    Features
-                  </button>
-
-                  <div class="collapse" id="collapseExample">
-                    <ul class="dropdown-menu card card-body">
+            <div className="offcanvas-body">
+              <div className="inner-body">
+                <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="featuresDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Features
+                    </a>
+                    <ul
+                      className="dropdown-menu"
+                      aria-labelledby="featuresDropdown"
+                    >
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           <img src="./images/icon-todo.svg" alt="icon" />
                           <span>Todo List</span>
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           <img src="./images/icon-calendar.svg" alt="icon" />
                           <span>Calendar</span>
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           <img src="./images/icon-reminders.svg" alt="icon" />
                           <span>Reminders</span>
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           <img src="./images/icon-planning.svg" alt="icon" />
                           <span>Planning</span>
                         </a>
                       </li>
                     </ul>
-                  </div>
-                </div>
+                  </li>
 
-                <div className="company">
-                  <button
-                    class="btn dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample2"
-                    aria-expanded="false"
-                    aria-controls="collapseExample2"
-                  >
-                    Company
-                  </button>
-
-                  <div class="collapse" id="collapseExample2">
-                    <ul class="dropdown-menu card card-body">
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="companyDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Company
+                    </a>
+                    <ul
+                      className="dropdown-menu"
+                      aria-labelledby="companyDropdown"
+                    >
                       <li>
-                        <a class="dropdown-item" href="#">
-                          <span>History</span>
+                        <a className="dropdown-item" href="#">
+                          History
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
-                          <span>Our Team</span>
+                        <a className="dropdown-item" href="#">
+                          Our Team
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
-                          <span>Blog</span>
+                        <a className="dropdown-item" href="#">
+                          Blog
                         </a>
                       </li>
                     </ul>
-                  </div>
-                </div>
+                  </li>
 
-                <div className="Careers">
-                  <span>
-                    Careers
-                  </span>
-                </div>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      Careers
+                    </a>
+                  </li>
 
-                <div className="About">
-                  <span>
-                    About
-                  </span>
-                </div>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      About
+                    </a>
+                  </li>
+                </ul>
 
-                <div className="Signup">
-                  <button type="button" class="btn login">Login</button>
-                  <button type="button" class="btn register">Register</button>
+                <ul className="Signup">
+                  <button type="button" className="btn login">
+                    Login
+                  </button>
 
-                </div>
+                  <button type="button" className="btn register">
+                    Register
+                  </button>
+                </ul>
               </div>
             </div>
           </div>
@@ -134,11 +139,39 @@ function Nav() {
   );
 }
 
+function Container() {
+  return (
+    <>
+      <div className="container">
+        <div className="rightSide">
+          <Hero />
+        </div>
+        <div className="leftSide">
+          <About />
+          <Client />
+        </div>
+      </div>
+    </>
+  );
+}
+
 function Hero() {
   return (
     <>
       <div className="hero">
-        <img src="./images/image-hero-mobile.png" alt="hero" />
+        <img
+          src="./images/image-hero-mobile.png"
+          className="img-fluid d-block d-lg-none"
+          alt="hero"
+        />
+        {/* <img src="./image-hero-mobile.png" className="img-fluid d-block d-sm-none"
+          alt="illustration of hero in mobile" /> */}
+
+        <img
+          src="./images/image-hero-desktop.png"
+          className="img-fluid d-none d-lg-block"
+          alt="illustration of hero in desktop"
+        />
       </div>
     </>
   );
@@ -149,10 +182,10 @@ function About() {
     <>
       <div className="about">
         <h2 className="header">Make remote work</h2>
-        <summary className="summary">
+        <span className="summary">
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
-        </summary>
+        </span>
         <button className="btn">Learn more</button>
       </div>
     </>
@@ -179,9 +212,7 @@ function App() {
   return (
     <>
       <Nav />
-      <Hero />
-      <About />
-      <Client />
+      <Container />
     </>
   );
 }

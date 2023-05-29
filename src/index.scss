@@ -25,6 +25,9 @@ body {
 .about {
   margin: 3rem 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .header {
     font-weight: bold;
@@ -32,7 +35,12 @@ body {
     font-size: 2.5rem;
   }
 
+  .summary {
+    font-size: 1.1rem;
+  }
+
   .btn {
+    width: 40%;
     margin-top: 1rem;
     padding: 0.7rem 1rem;
     border-radius: 1rem;
@@ -68,7 +76,7 @@ body {
 
   .dropdown-menu {
     border: none;
-    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   .dropdown-item {
@@ -85,13 +93,16 @@ body {
 .Signup {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 
   .login {
     background-color: #fff;
+    padding: 0rem 2rem;
   }
   .btn.register {
-    padding: 0.5rem;
+    padding: 0.5rem 2rem;
     border-radius: 1rem;
     border: $Almost_Black solid 2px;
   }
@@ -100,4 +111,57 @@ body {
 .Careers,
 .About {
   cursor: pointer;
+}
+
+/* Media query for desktop screens */
+@media (min-width: 1297px) {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 5rem;
+  }
+
+  .logo {
+    width: 100%;
+  }
+  .offcanvas-body {
+    align-self: self-end;
+
+    ul {
+      margin: 0;
+    }
+
+    .inner-body {
+      display: flex;
+    }
+  }
+
+  .Signup {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .leftSide {
+    padding-right: 4rem;
+    .about {
+      text-align: left;
+
+      gap: 1rem;
+
+      .header {
+        font-size: 5rem;
+      }
+
+      .summary {
+        font-size: 1.3rem;
+      }
+
+      .btn {
+        width: 35%;
+        align-self: flex-start;
+      }
+    }
+  }
 }
