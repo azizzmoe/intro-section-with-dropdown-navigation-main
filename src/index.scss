@@ -147,6 +147,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row-reverse;
     margin-top: 5rem;
+    gap: 2rem;
   }
 
   .logo {
@@ -176,21 +177,20 @@ body::-webkit-scrollbar {
   .rightSide{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
   }
   .leftSide {
-    gap: 5rem;
-    padding-right: 4rem;
+    gap: 3rem;
     align-self: flex-end;
 
     .about {
       margin: 0;
       text-align: left;
-      gap: 3rem;
+      gap: 2rem;
 
       .header {
         align-self: flex-start;
-        font-size: 6rem;
+        font-size: 5rem;
 
         span{
           display: block;
