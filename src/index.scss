@@ -173,8 +173,7 @@ body::-webkit-scrollbar {
     align-items: center;
   }
 
-
-  .rightSide{
+  .rightSide {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -190,9 +189,9 @@ body::-webkit-scrollbar {
 
       .header {
         align-self: flex-start;
-        font-size: 4rem;
+        font-size: 4.5rem;
 
-        span{
+        span {
           display: block;
           padding: 0;
           margin: 0;
@@ -200,7 +199,7 @@ body::-webkit-scrollbar {
       }
 
       .summary {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
 
       .btn {

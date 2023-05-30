@@ -158,21 +158,24 @@ function Main() {
 function Hero() {
   return (
     <>
-      <div className="hero">
-        <img
-          src="./images/image-hero-mobile.png"
-          className="img-fluid d-block d-lg-none"
-          alt="hero"
-        />
-        {/* <img src="./image-hero-mobile.png" className="img-fluid d-block d-sm-none"
-          alt="illustration of hero in mobile" /> */}
+      <section className="hero">
+        <div className="hero-image">
+          <img
+            src="./images/image-hero-mobile.png"
+            className="img-fluid d-block d-lg-none"
+            alt="hero"
+          />
+        </div>
 
-        <img
-          src="./images/image-hero-desktop.png"
-          className="img-fluid d-none d-lg-block"
-          alt="illustration of hero in desktop"
-        />
-      </div>
+        <div className="hero-image">
+          <img
+            src="./images/image-hero-desktop.png"
+            className="img-fluid d-none d-lg-block"
+            alt="illustration of hero in desktop"
+          />
+        </div>
+      </section>
+
     </>
   );
 }
