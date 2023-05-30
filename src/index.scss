@@ -12,8 +12,30 @@ body {
   color: $Medium_Gray;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
 .offcanvas {
   max-width: 300px;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero {
@@ -50,10 +72,11 @@ body {
 }
 
 .clients {
-  padding: 0 1rem 1rem 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
+  width: 30%;
 
   img {
     width: 100%;
@@ -96,6 +119,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 0;
 
   .login {
     background-color: #fff;
@@ -114,8 +138,12 @@ body {
 }
 
 /* Media query for desktop screens */
-@media (min-width: 1297px) {
-  .container {
+@media (min-width: 992px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .main {
     display: flex;
     flex-direction: row-reverse;
     margin-top: 5rem;
@@ -132,7 +160,9 @@ body {
     }
 
     .inner-body {
+      width: 100%;
       display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -140,27 +170,57 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
   }
 
-  .leftSide {
-    padding-right: 4rem;
-    .about {
-      text-align: left;
 
-      gap: 1rem;
+  .rightSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .leftSide {
+    gap: 5rem;
+    padding-right: 4rem;
+    align-self: flex-end;
+
+    .about {
+      margin: 0;
+      text-align: left;
+      gap: 3rem;
 
       .header {
-        font-size: 5rem;
+        align-self: flex-start;
+        font-size: 6rem;
+
+        span{
+          display: block;
+          padding: 0;
+          margin: 0;
+        }
       }
 
       .summary {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
 
       .btn {
-        width: 35%;
+        width: 30%;
         align-self: flex-start;
+
+        &:hover {
+          background-color: $Almost_White;
+          color: #141414;
+          border: $Almost_Black solid 2px;
+        }
+      }
+    }
+
+    .clients {
+      // margin-top: 8rem;
+      width: 100%;
+      img {
+        width: 50%;
+        height: 50%;
       }
     }
   }

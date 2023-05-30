@@ -139,10 +139,10 @@ function Nav() {
   );
 }
 
-function Container() {
+function Main() {
   return (
     <>
-      <div className="container">
+      <div className="container main">
         <div className="rightSide">
           <Hero />
         </div>
@@ -181,7 +181,7 @@ function About() {
   return (
     <>
       <div className="about">
-        <h2 className="header">Make remote work</h2>
+        <h2 className="header">Make <span>remote work</span></h2>
         <span className="summary">
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
@@ -212,7 +212,7 @@ function App() {
   return (
     <>
       <Nav />
-      <Container />
+      <Main />
     </>
   );
 }
