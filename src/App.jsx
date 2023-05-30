@@ -122,13 +122,13 @@ function Nav() {
                 </ul>
 
                 <ul className="Signup">
-                  <button type="button" className="btn login">
+                  <li type="button" className="btn login">
                     Login
-                  </button>
+                  </li>
 
-                  <button type="button" className="btn register">
+                  <li type="button" className="btn register">
                     Register
-                  </button>
+                  </li>
                 </ul>
               </div>
             </div>

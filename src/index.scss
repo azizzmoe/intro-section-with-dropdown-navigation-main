@@ -146,8 +146,8 @@ body::-webkit-scrollbar {
   .main {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 5rem;
-    gap: 2rem;
+    padding: 3rem;
+    gap: 6rem;
   }
 
   .logo {
@@ -190,7 +190,7 @@ body::-webkit-scrollbar {
 
       .header {
         align-self: flex-start;
-        font-size: 5rem;
+        font-size: 4rem;
 
         span{
           display: block;
@@ -200,7 +200,7 @@ body::-webkit-scrollbar {
       }
 
       .summary {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
 
       .btn {
@@ -216,12 +216,7 @@ body::-webkit-scrollbar {
     }
 
     .clients {
-      // margin-top: 8rem;
       width: 100%;
-      img {
-        width: 50%;
-        height: 50%;
-      }
     }
   }
 }
